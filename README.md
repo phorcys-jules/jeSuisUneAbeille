@@ -1,12 +1,12 @@
 # Je Suis Une Abeille
 Projet de Gestion de projet Web : méthodes agiles LP ciasie iut Nancy charlemagne 2021-2022
 
-François Jules
+- François Jules
 
-Mangenot Alex
+- Mangenot Alex
 
-Orias Théo
+- Orias Théo
 
-Olivia Tania
+- Olivia Tania
 
-Saker Lucas
+- Saker Lucas
