@@ -3,8 +3,8 @@ Comment utiliser le backoffice :
     - Lancer avec npm run start
 
 Le serveur est alors disponible a l'adresse : 
-    - http://localhost:8321
+    - http://localhost:7456
 
 
 ## Liste des routes principales : 
-    - http://localhost:8321/plante
+    - http://localhost:7456/plante
