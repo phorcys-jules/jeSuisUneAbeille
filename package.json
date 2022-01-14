@@ -1,0 +1,22 @@
+{
+  "name": "jesuisuneabeille",
+  "version": "1.0.0",
+  "description": "Projet de Gestion de projet Web : méthodes agiles LP ciasie iut Nancy charlemagne 2021-2022",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phorcys-jules/jeSuisUneAbeille.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phorcys-jules/jeSuisUneAbeille/issues"
+  },
+  "homepage": "https://github.com/phorcys-jules/jeSuisUneAbeille#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
