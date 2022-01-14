@@ -2,7 +2,8 @@ const express = require("express");
 let plante = require('./models/Plante');
 
 const app = express();
-const PORT = 8321;
+const PORT = 7456;
+//Microservice Gérant le back office
 
 /**
  * Routes available
@@ -12,10 +13,12 @@ app.get('/', (req, res) =>
 );
 
 app.post('/', function(req, res) {
-    res.json({
+    console.log(req.params);
+    console.log(req.body);
+    res.status(201).json({
         firstname: "John",
         lastname: "Snow"
-    }, 201)
+    })
 });
 
 //routes from Routers
