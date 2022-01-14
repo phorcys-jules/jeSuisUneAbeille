@@ -10,3 +10,5 @@ Projet de Gestion de projet Web : méthodes agiles LP ciasie iut Nancy charlemag
 - Olivia Tania
 
 - Saker Lucas
+
+Pour lancer le server web il faut utiliser les commande : `npm start`.
