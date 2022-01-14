@@ -15,18 +15,7 @@ app.get('/', (req, res) =>
 );
 
 app.post('/', function(req, res) {
-    let nom_latin = req.query.nom_latin;
-    let nom_fr = req.query.nom_fr;
-    let hauteur = req.query.hauteur;
-    let nectar = req.query.nectar;
-    let pollen = req.query.pollen;
-    let miellat = req.query.miellat;
-    let floraison = req.query.floraison;
-    let emplacement = req.query.emplacement;
-    let photo = req.query.photo;
-    let localisation = req.query.localisation;
-    console.log(req.query)
-    res.status(201).send(`${nom_latin} created`)
+    console.log(req.query);
 });
 
 //routes from Routers
