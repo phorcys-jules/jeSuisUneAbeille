@@ -9,16 +9,24 @@ const PORT = 7456;
  * Routes available
  */
 app.get('/', (req, res) => 
-    res.send('Je suis une abeille homepage')
+    res.status(200).json({
+        h1: "Je suis une abeille homepage"
+    })
 );
 
 app.post('/', function(req, res) {
-    console.log(req.params);
-    console.log(req.body);
-    res.status(201).json({
-        firstname: "John",
-        lastname: "Snow"
-    })
+    let nom_latin = req.query.nom_latin;
+    let nom_fr = req.query.nom_fr;
+    let hauteur = req.query.hauteur;
+    let nectar = req.query.nectar;
+    let pollen = req.query.pollen;
+    let miellat = req.query.miellat;
+    let floraison = req.query.floraison;
+    let emplacement = req.query.emplacement;
+    let photo = req.query.photo;
+    let localisation = req.query.localisation;
+    console.log(req.query)
+    res.status(201).send(`${nom_latin} created`)
 });
 
 //routes from Routers
