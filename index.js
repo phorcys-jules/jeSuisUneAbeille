@@ -9,10 +9,10 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: false }));
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}.`);
+app.get('/', function(req, res){
+    res.sendFile(path.join(__dirname + '/src/frontOffice/html/index.html'));
 });
 
-router.get('/', function(req, res){
-    res.sendFile(path.join(__dirname + '/src/frontOffice/html/index.html'));
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}.`);
 });
