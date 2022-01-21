@@ -1,5 +1,6 @@
 const express = require("express");
 let plante = require('./models/Plante');
+let qrCode = require('./models/qrcode');
 
 const app = express();
 const PORT = 7456;
@@ -20,6 +21,7 @@ app.post('/', function(req, res) {
 
 //routes from Routers
 app.use('/plante', plante);
+app.use('/qrcode', qrCode);
 
 
 
