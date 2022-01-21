@@ -19,16 +19,24 @@ export class Produit {
     toProduct() {
     let tr = document.createElement("tr");
     
-    tr.innerHTML= `
-        <th scope="row">${this.nom}</th>
-        <td>${this.description}</td>
-        <td>${this.prix}€</td>
-        <td>${this.tailleLot}</td>
-        <td>
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-            <img class="me-2" src="../assets/icone/trash-solid-red.svg" height=20 width=20 />
-        </div>
+    tr.innerHTML= `<td>b</td>
+        <td scope="row">${this.nomLatin}</td>
+        <td>${this.nomFrançais}</td>
+        <td>${this.hauteur}</td>
+        <td>${this.nectar}</td>
+        <td>${this.pollen}</td>
+        <td>${this.miellat}</td>
+        <td>${this.floraison}</td>
+        <td>${this.couleur}</td>
+        <td><a class="blue" onclick="showQR('abc123')">abc123</a></td>
+        <td class="text-center">
+            <div class="form-check form-switch text-center">
+                <input class="form-check-input text-center" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+            </div>
+        </td>
+        <td class="text-center">
+            <img class="me-2" src="../../../assets/icone/trash-solid-red.svg" height=20 width=20 />
         </td>`
     return tr;
+}
 }
