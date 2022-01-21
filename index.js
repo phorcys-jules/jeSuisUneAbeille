@@ -1,5 +1,5 @@
 const express = require('express')
-const path = require('path')
+const path = require('path');
 const map = require('./src/backOffice/js/map');
 const plantes = require('./src/backOffice/js/plantes');
 const qrcode = require('./src/backOffice/js/qrcode');
@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get('/', function(req, res){
-    res.sendFile("index.html");
+    res.sendFile(__dirname + "/src/frontOffice/html/index.html");
 });
 
 app.use('/map', map);
