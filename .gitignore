@@ -2,3 +2,4 @@ src/backOffice/node_modules
 node_modules
 
 db.congif.js
+db.config.js
