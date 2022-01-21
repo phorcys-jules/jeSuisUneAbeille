@@ -1,16 +1,16 @@
 const express = require("express");
-const app = express();
+let router = express.Router();
 
 
-app.get('/', (req, res) => 
+router.get('/', (req, res) => 
     res.status(200).json({
         QRCode: "Homepage des QRCode"
     })
 );
 
-app.get('/test', (req, res) => 
+router.get('/test', (req, res) => 
     res.send('testQRcode')
 );
 
 
-module.exports = app;
+module.exports = router;
