@@ -70,7 +70,7 @@ app.post('/register', (req, res) => {
         let hashMdp = await bcrypt.hash(mdp, 8)
         console.log(hashMdp)
 
-        sql.query('INSERT INTO # SET ?', { pseudo: pseudo, nom: nom, prenom: prenom, mdp: hashMdp }, (error, results) => {
+        sql.query('INSERT INTO # SET ?', { pseudo: pseudo, mdp: hashMdp }, (error, results) => {
             if (error) {
                 throw error
             } else {
