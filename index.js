@@ -12,7 +12,7 @@ const app = express()
 const vuesDirectory = path.join(__dirname, './src/frontOffice/html')
 app.use(express.static(vuesDirectory))
 
-const assetsDirectory = path.join(__dirname, './Maquettes')
+const assetsDirectory = path.join(__dirname, './assets')
 app.use(express.static(assetsDirectory))
 
 const stylesDirectory = path.join(__dirname, './src/frontOffice/css')
