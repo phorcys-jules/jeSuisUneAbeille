@@ -39,7 +39,7 @@ app.post('/login', (req, res) => {
     sql.query('SELECT mail FROM utilisateur WHERE pseudo = ?', [mail], (err, result) => {
         if (err) throw err
 
-        if ((result.length) && (bcrypt.compareSync(mdp, result[0].mdp)) && (pseudo == result[0].pseudo)) {
+        if ((result.length) && (bcrypt.compareSync(mdp, result[0].mdp)) && (mail == result[0].mail)) {
             res.send('Connecté')
         } else {
             res.send('Mauvais pseudo ou mot de passe')
