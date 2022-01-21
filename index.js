@@ -2,9 +2,9 @@ const express = require('express')
 const path = require('path');
 const bcrypt = require('bcryptjs')
 const sql = require("./db.js");
-const map = require('./src/backOffice/js/map');
-const plantes = require('./src/backOffice/js/plantes');
-const qrcode = require('./src/backOffice/js/qrcode');
+const map = require('./src/backOffice/js/routes/map');
+const plantes = require('./src/backOffice/js/routes/plantes');
+const qrcode = require('./src/backOffice/js/routes/qrcode');
 
 const PORT = process.env.PORT || 8080;
 const app = express()
