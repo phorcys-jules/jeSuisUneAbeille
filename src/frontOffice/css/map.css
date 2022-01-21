@@ -1,0 +1,60 @@
+@media (max-width: 640px) {
+	body{
+		font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+	}
+	.title{
+		background-color: rgba(0, 0, 0, 0.85);
+		color: white;
+		border: 5px solid black;
+		text-align: center;
+		margin: 50px 0 40px 0;
+	}
+
+	#geolocation{
+		border: 3px solid black;
+		background-color: rgba(255, 190, 0, 0.8);
+		font-weight: bold;
+		padding: 10px 20px;
+		font-size: 15px;
+		border-radius: 5px;
+	}
+
+	#button{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 50px 0 50px 0;
+	}
+
+	.navbar-top{
+		display: grid;
+		grid-template-columns: 56% 22% 22%;
+	}
+
+	.navbar-top a:nth-of-type(2){
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.navbar-top a:nth-of-type(3){
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.navbar-bottom-play{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	footer{
+		position: absolute;
+		bottom: 0;
+		background-color: rgba(255, 190, 0, 0.4);
+		width: 95%;
+	}
+
+
+}

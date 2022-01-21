@@ -1,4 +1,8 @@
 src/backOffice/node_modules
 node_modules
+<<<<<<< HEAD
 
 db.congif.js
+=======
+.idea/
+>>>>>>> bb155373c9bd3cd8b0cd188ff2442647c596704c

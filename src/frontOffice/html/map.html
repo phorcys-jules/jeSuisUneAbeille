@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carte de Jardin Botanique</title>
+        <link rel="stylesheet" href="map.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+              integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+              crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+                integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+                crossorigin=""></script>
+    </head>
+    <body>
+        <div class="navbar-top">
+            <a href="http://localhost:8080/"><img src="logo.png" alt="logo.png" style="width: 80px;"></a>
+            <a href="http://localhost:8080/"><img src="map.png" alt="map.png" style="width: 60px;"></a>
+            <a href="http://localhost:8080/"><img src="compte.jpeg" alt="compte.jpeg" style="width: 65px;"></a>
+        </div>
+        <div class="title">
+            <h2>CARTE DE JARDIN BOTANIQUE</h2>
+        </div>
+        <div id="map" style="width: auto; height: 350px;"></div>
+        <div id="button">
+            <button id="geolocation">Ma position</button>
+        </div>
+        <footer>
+            <div class="navbar-bottom-play">
+                <a href="http://localhost:8080/"><img src="play.png" alt="play.png" style="width: 80px;"></a>
+            </div>
+        </footer>
+        <script src="map.js"></script>
+    </body>
+</html>
