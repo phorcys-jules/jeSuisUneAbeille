@@ -1,5 +1,8 @@
 const express = require('express')
 const path = require('path')
+const map = require('./src/backOffice/js/map');
+const plantes = require('./src/backOffice/js/plantes');
+const qrcode = require('./src/backOffice/js/qrcode');
 
 const PORT = process.env.PORT || 8080;
 const app = express()
@@ -23,17 +26,11 @@ app.get('/', function(req, res){
     res.sendFile("index.html");
 });
 
-app.get('/plantes', function(req, res){
-    res.json({
-        Page : "Plantes"
-    })
-});
+app.use('/map', map);
 
-app.get('/map', function(req, res){
-    res.json({
-        Page : "Map"
-    })
-});
+app.use('/plantes', plantes);
+
+app.use('/qrcode', qrcode);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
