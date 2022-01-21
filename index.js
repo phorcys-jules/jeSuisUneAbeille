@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get('/', function(req, res){
-    res.sendFile("index.html");
+    res.sendFile("frontOffice/html/index.html");
 });
 
 app.use('/map', map);
