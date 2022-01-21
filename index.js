@@ -33,10 +33,10 @@ app.get('/login', (req, res) => {
 
 app.post('/login', (req, res) => {
 
-    let pseudo = req.body.pseudo
+    let mail = req.body.mail
     let mdp = req.body.mdp
 
-    sql.query('SELECT * FROM users WHERE pseudo = ?', [pseudo], (err, result) => {
+    sql.query('SELECT mail FROM utilisateur WHERE pseudo = ?', [mail], (err, result) => {
         if (err) throw err
 
         if ((result.length) && (bcrypt.compareSync(mdp, result[0].mdp)) && (pseudo == result[0].pseudo)) {
@@ -52,11 +52,12 @@ app.get('/register', (req, res) => {
 })
 
 app.post('/register', (req, res) => {
-    let pseudo = req.body.pseudo
+    let mail = req.body.mail
+    let nom = req.body.nom
     let mdp = req.body.mdp
     let mdpConf = req.body.mdpConf
 
-    sql.query('SELECT pseudo FROM # WHERE pseudo = ?', [pseudo], async (error, results) => {
+    sql.query('SELECT pseudo FROM utilisateur WHERE pseudo = ?', [mail], async (error, results) => {
 
         if (error) throw error
 
@@ -70,7 +71,7 @@ app.post('/register', (req, res) => {
         let hashMdp = await bcrypt.hash(mdp, 8)
         console.log(hashMdp)
 
-        sql.query('INSERT INTO # SET ?', { pseudo: pseudo, mdp: hashMdp }, (error, results) => {
+        sql.query('INSERT INTO utilisateur SET ?', { mail: mail, nom: nom, mdp: hashMdp }, (error, results) => {
             if (error) {
                 throw error
             } else {
