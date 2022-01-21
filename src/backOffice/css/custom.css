@@ -1,0 +1,49 @@
+.Nav {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.description a {
+  color: currentColor;
+}
+.description p {
+  padding-left: 0.5em;
+}
+
+body {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  margin-left: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #0f222d;
+}
+
+.infoBox {
+  background-size: 50%;
+  width: auto;
+  height: auto;
+  padding-bottom: 6em;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.justi {
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .navbar-nav:nth-child(1) {
+    flex-direction: column !important;
+  }
+}
+
+/*# sourceMappingURL=custom.css.map */

@@ -8,3 +8,4 @@ Le serveur est alors disponible a l'adresse :
 
 ## Liste des routes principales : 
     - http://localhost:7456/plante
+    - http://localhost:7456/qrcode

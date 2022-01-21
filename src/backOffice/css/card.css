@@ -1,0 +1,152 @@
+body {
+  margin-top: 20px;
+}
+
+.navbar-toggler {
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+  display: block !important;
+  position: absolute;
+}
+
+#tabs {
+  justify-content: center;
+}
+
+.containerPrim {
+  text-align: center;
+  justify-content: center;
+  padding: 0 3em;
+}
+
+.containerSec {
+  justify-content: center !important;
+  text-align: center;
+}
+
+.card {
+  border: none;
+}
+
+.card-img {
+  border-radius: 0;
+}
+
+.vgr-cards .card {
+  display: flex;
+  flex-flow: wrap;
+  flex: 100%;
+  margin-bottom: 40px;
+  /*
+  &:nth-child(even) .card-img-body {
+    order: 2;
+  }
+
+  &:nth-child(even) .card-body {
+    padding-left: 0;
+    padding-right: 0rem; 
+  }
+  &:nth-child(even) .card-desc {
+    padding-right: 1.5rem;
+    margin-left: -10.5rem;
+  }*/
+}
+.vgr-cards .card-img-body {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.vgr-cards .card-img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 1140px) {
+  .vgr-cards .card-img {
+    margin: 0;
+    transform: none;
+    width: 100%;
+    height: auto;
+  }
+}
+.vgr-cards .card-body {
+  display: flex;
+  flex: 1;
+  padding: 0 0 0 1.25rem;
+}
+.vgr-cards .card-desc {
+  flex: 1;
+  text-align: justify;
+}
+
+.card-producteur {
+  margin-left: 5%;
+}
+
+.card-title {
+  width: 50%;
+}
+
+.card-text {
+  display: flex;
+  width: 50%;
+}
+.card-text :first-child {
+  width: 60%;
+  padding: 0;
+  margin: 0;
+}
+.card-text :nth-child(2) {
+  width: 40%;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: block !important;
+    justify-content: center !important;
+  }
+
+  .Nav {
+    flex-direction: column;
+  }
+
+  .card-group {
+    display: block;
+  }
+  .card-group .card {
+    display: block;
+  }
+  .card-group .card .card-body {
+    display: block;
+  }
+  .card-group .card .card-body .card-text {
+    display: block;
+    width: 100%;
+  }
+  .card-group .card .card-body .card-text p {
+    padding: 0;
+    width: 100%;
+  }
+  .card-group .card .quantite {
+    display: block;
+  }
+}
+@media (max-width: 400px) {
+  #tabs {
+    font-size: small;
+  }
+
+  .navbar-toggler {
+    width: 2em;
+    padding: 0.2em;
+  }
+
+  .containerPrim {
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=card.css.map */
