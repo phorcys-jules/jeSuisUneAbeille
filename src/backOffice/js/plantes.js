@@ -7,4 +7,8 @@ app.get('/', (req, res) =>
     })
 );
 
+app.get('/rose', (req, res) => 
+    res.send('Rose')
+);
+
 module.exports = app;
