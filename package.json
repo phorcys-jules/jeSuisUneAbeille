@@ -19,7 +19,11 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.17.2",
+<<<<<<< HEAD
     "mysql": "^2.18.1",
+=======
+    "nodemon": "2.0.15",
+>>>>>>> 19d9dcb618477c3c638ab43f6a3149c1be8ba74c
     "path": "^0.12.7"
   }
 }
