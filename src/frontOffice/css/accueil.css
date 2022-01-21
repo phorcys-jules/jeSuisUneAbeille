@@ -1,0 +1,20 @@
+@media (max-width: 640px) {
+	img{
+		width: 100%;
+	}
+
+	#jeu{
+		grid-row: 2/3;
+	}
+
+	#info{
+		text-align: center;
+		color: gray;
+	}
+
+	#container{
+		display: grid;
+		grid-template-rows: 40% 50% 40%;
+
+	}
+}
