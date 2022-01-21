@@ -28,26 +28,25 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul id="tabs" class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item"><a href="./dashboard.html" id="plantes" class="nav-link disabled">Les plantes</a></li>
-                                <li class="nav-item"><a href="./emplacement.html" id="profil" class="nav-link disabled">Les emplacements</a></li>
-                                <li class="nav-item"><a href="./carte.html" id="commandes" class="nav-link disabled">La carte</a></li>
+                                <li class="nav-item"><a href="./emplacement.html" id="profil" class="nav-link">Les emplacements</a></li>
+                                <li class="nav-item"><a href="./carte.html" id="commandes" class="nav-link">La carte</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
 
-                <div class="modal" tabindex="-1">
+                <div class="modal" id="exampleModal">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title">Modal title</h5>
+                            <h5 class="modal-title">Qr code N°abc123</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <p>Modal body text goes here.</p>
+                          <img class="img-thumbnail" src="../../../assets/qr_code_example.jpg" alt="QrCode">
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                       </div>
                     </div>
@@ -85,27 +84,6 @@
                     </thead>
                         <tbody id="plantList">
                             <tr>
-                                <th scope="row">a</th>
-                                    <td>b</td>
-                                    <td>c</td>
-                                    <td>d</td>
-                                    <td>e</td>
-                                    <td>f</td>
-                                    <td>g</td>
-                                    <td>h</td>
-                                    <td>i</td>
-                                    <td>j</td>
-                                    <td><a class="blue" onclick="showQR('abc123')">abc123</a></td>
-                                    <td class="text-center">
-                                        <div class="form-check form-switch text-center">
-                                            <input class="form-check-input text-center" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <img class="me-2" src="../../../assets/icone/trash-solid-red.svg" height=20 width=20 />
-                                    </td>
-                            </tr>
-                            <tr>
                                 <th scope="row">Acer campestris</th>
                                     <td>érable champêtre</td>
                                     <td>15m</td>
@@ -120,7 +98,9 @@
                                     <td>vert clair</td>
                                     <td>collection hisorique</td>
                                     <td><img src="../../../assets/plante/Acer campestre.jpg" class="img-thumbnail" alt=""></td>
-                                    <td><a class="blue" onclick="showQR('abc123')">abc123</a></td>
+                                    <td>
+                                        <button class="btn btn-primary" onclick="showQR('abc123')" data-bs-toggle="modal" data-bs-target="#exampleModal">abc123</button>
+                                    </td>
                                     <td class="text-center">
                                         <div class="form-check form-switch text-center">
                                             <input class="form-check-input text-center" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
