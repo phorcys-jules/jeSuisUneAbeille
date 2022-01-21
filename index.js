@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path');
 const bcrypt = require('bcryptjs')
+const sql = require("./db.js");
 const map = require('./src/backOffice/js/map');
 const plantes = require('./src/backOffice/js/plantes');
 const qrcode = require('./src/backOffice/js/qrcode');
