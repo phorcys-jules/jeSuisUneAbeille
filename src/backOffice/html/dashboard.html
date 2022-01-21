@@ -16,6 +16,7 @@
                 <link href="../css/card.css" rel="stylesheet" />
                 <link href="../css/custom.css" rel="stylesheet" />
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                
             </head>
 
             <body>
@@ -60,10 +61,33 @@
                             <th scope="col">Emplacements</th>
                             <th scope="col">Jardin</th>
                             <th scope="col">Photos</th>
+                            <th scope="col">QrCode</th>
+                            <th scope="col">Activer / Desactiver</th>
+                            <th scope="col">Supprimer</th>
                         </tr>
                     </thead>
                         <tbody id="plantList">
-
+                            <tr>
+                                <th scope="row">a</th>
+                                    <td>b</td>
+                                    <td>c</td>
+                                    <td>d</td>
+                                    <td>e</td>
+                                    <td>f</td>
+                                    <td>g</td>
+                                    <td>h</td>
+                                    <td>i</td>
+                                    <td>j</td>
+                                    <td><a class="blue" onclick="showQR('abc123')">abc123</a></td>
+                                    <td class="text-center">
+                                        <div class="form-check form-switch text-center">
+                                            <input class="form-check-input text-center" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <img class="me-2" src="../../../assets/icone/trash-solid-red.svg" height=20 width=20 />
+                                    </td>
+                            </tr>
                         </tbody>
                     </table>
 
@@ -77,9 +101,11 @@
                     <p class="m-0 text-center text-white">Copyright &copy; Beehoneyst 2022</p>
                 </div>
             </footer>
+              
             <!-- Bootstrap core JS-->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
             <!-- Core theme JS-->
+            <script type="text/javascript" src="../js/dashboard.js"></script>
             <script type="module" src="../js/scripts.js"></script>
         </body>
 
