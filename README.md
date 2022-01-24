@@ -3,14 +3,16 @@ Projet de Gestion de projet Web : Méthodes agiles LP CIASI IUT Nancy-Charlemagn
 
 <p>Notre projet s'appelle "Beehoneyst"</p>
 
-- François Jules
+<p><b>Équipes :</b><p>
 
-- Mangenot Alex
+- FRANÇOIS Jules
 
-- Orias Théo
+- MANGENOT Alex
 
-- Olivia Tania
+- ORIAS Théo
 
-- Saker Lucas
+- OLIVIA Tania
+
+- SAKER Lucas
 
 Pour lancer le server web il faut utiliser les commande : `npm start`.
