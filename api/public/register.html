@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JeSuisUneAbeille</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+</head>
+
+<body>
+  <nav class="nav bg-light">
+    <h4 class="mt-1 ms-1">JeSuisUneAbeille</h4>
+    <a class="nav-link text-warning" href="/">Main Page</a>
+    <a class="nav-link text-warning" href="/map">Map</a>
+    <a class="nav-link text-warning" href="/leaderboard">Leaderboard</a>
+    <a class="nav-link text-warning" href="/login">Login</a>
+    <a class="nav-link text-warning" href="/register">Register</a>
+  </nav>
+  <div class="container mt-4 p-4 d-flex justify-content-center">
+    <div class="card" style="width: 18rem;">
+      <div class="card-header">
+        Register
+      </div>
+      <div class="card-body">
+        <form action="/register" method="post">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="mail" name="mail">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="nom" name="nom">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="mdp" name="mdp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Confirm password</label>
+            <input type="password" class="form-control" id="mdpConf" name="mdpConf">
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
