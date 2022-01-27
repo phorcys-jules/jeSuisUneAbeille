@@ -1,14 +1,18 @@
 # Je Suis Une Abeille
-Projet de Gestion de projet Web : méthodes agiles LP ciasie iut Nancy charlemagne 2021-2022
+Projet de Gestion de projet Web : Méthodes agiles LP CIASI IUT Nancy-Charlemagne 2021-2022
 
-- François Jules
+<p>Notre projet s'appelle <em><b>Beehoneyst<b></em></p>
 
-- Mangenot Alex
+<p><b>Équipes :</b><p>
 
-- Orias Théo
+- FRANÇOIS Jules
 
-- Olivia Tania
+- MANGENOT Alex
 
-- Saker Lucas
+- ORIAS Théo
+
+- OLIVIA Tania
+
+- SAKER Lucas
 
 Pour lancer le server web il faut utiliser les commande : `npm start`.
