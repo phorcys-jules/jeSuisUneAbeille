@@ -28,7 +28,7 @@ btnAddPlant.addEventListener("click", function(e){
 });
 
 
-document.getElementById('editBtn').addEventListener("click", showQR());
+//document.getElementById('editBtn').addEventListener("click", showQR());
 //todo
 function showQR(){
     let codeNumber = 0;
@@ -56,3 +56,8 @@ function save(btn) {
     });
     //e.onclick= edit(e);
 }
+
+//une fois page chargé, ajouter less élèments 
+document.addEventListener("DOMContentLoaded", function(){
+    let plantes = Plantes.getAll();
+});
