@@ -35,7 +35,7 @@ router.get('/all', async function (req, res, next) {
 
 router.get('/info', function(req, res) {
     let qr_code = req.query.qr_code;
-    res.send('Plante homepage');
+    res.send('Plante info page');
 });
 
 router.post('/createUpdate', function(req, res) {
