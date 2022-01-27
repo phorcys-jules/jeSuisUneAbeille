@@ -10,7 +10,9 @@ export class Plantes {
         this.floraison = floraison;
         this.couleur = couleur;
         this.localisation = emplacementsJardin;
-        this.qrCode = qrCode;
+        this.qrCode = qrCode; 
+        //TODO tmp remove
+        this.qrCode = "abc123"
         this.active = active
         this.photos = photos;
     }
