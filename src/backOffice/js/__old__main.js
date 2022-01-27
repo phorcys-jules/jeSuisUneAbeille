@@ -1,3 +1,5 @@
+/**DEPRECATED MICROSERVICE */
+
 const express = require("express");
 let plante = require('./models/Plante');
 let qrCode = require('./models/qrcode');

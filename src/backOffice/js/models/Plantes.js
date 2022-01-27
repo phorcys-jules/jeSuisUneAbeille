@@ -1,6 +1,4 @@
-import config from './config.js';
-
-export class Produit {
+export class Plantes {
     constructor(nomLatin, nomFrançais, hauteur, nectar, pollen, miellat , floraison, couleur, emplacementsJardin,qrCode, active, photos) {
 
         this.nomLatin=nomLatin;
@@ -11,7 +9,7 @@ export class Produit {
         this.miellat=miellat ;
         this.floraison=floraison;
         this.couleur=couleur;
-        this.emplacement=emplacementsJardin;
+        this.localisation=emplacementsJardin;
         this.qrCode=qrCode;
         this.active=active
         this.photos=photos;
@@ -38,5 +36,22 @@ export class Produit {
             <img class="me-2" src="../../../assets/icone/trash-solid-red.svg" height=20 width=20 />
         </td>`
     return tr;
-}
+    }
+
+    async enregistrerPlante() {
+        //fetch
+        let url = `http://localhost:8080/plantes/createUpdate?nom_latin=${this.nomLatin}&nom_fr=${this.nomFrançais}&hauteur=${this.hauteur}&nectar=${this.nectar}&pollen=${this.pollen}&miellat=${this.miellat}&floraison=${this.floraison}&couleur=${this.couleur}&photo=${this.photos}&localisation=${this.localisation}`;
+        //fetch("URL", { method: "POST"});
+        try {
+            let response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+        } catch(err) {
+            alert(err); // Failed to fetch
+        }
+    }
+
 }

@@ -6,8 +6,20 @@ const map = require('./src/backOffice/js/routes/map');
 const plantes = require('./src/backOffice/js/routes/plantes');
 const qrcode = require('./src/backOffice/js/routes/qrcode');
 
+
+
 const PORT = process.env.PORT || 8080;
-const app = express()
+const app = express();
+
+
+//cors
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 
 const vuesDirectory = path.join(__dirname, './src/frontOffice/html')
 app.use(express.static(vuesDirectory))

@@ -62,7 +62,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div id="editForm" class="modal-body">
+                    <form id="addForm" name="addForm" class="modal-body">
                         <!--FORM création plante
                         TODO exemple valeur-->
                         <div class="form-group mb-2">
@@ -79,32 +79,46 @@
                                 <div class="col-sm-8"><input type="text" name="Hauteur" id="Hauteur"></div>
                             </div>
                             <div class="row  mb3 align-items-center">
-                                <div class="col-sm-4"><label class="me-3 col-form-label">Nectar : </label></div>
-                                <div class="col-sm-8"><input type="number" name="Nectar" id="Nectar"></div>
+                                <div class="col-sm-4"><label class="me-3 col-form-label">Quantité de nectar : </label>
+                                </div>
+                                <div class="col-sm-8"><input type="number" name="Nectar" id="Nectar" value="0"></div>
                             </div>
                             <div class="row  mb3 align-items-center">
-                                <div class="col-sm-4"><label class="me-3 col-form-label">Pollen : </label></div>
-                                <div class="col-sm-8"><input type="number" name="Pollen" id="Pollen"></div>
+                                <div class="col-sm-4"><label class="me-3 col-form-label">Quantité de pollen : </label>
+                                </div>
+                                <div class="col-sm-8"><input type="number" name="Pollen" id="Pollen" value="0"></div>
+                            </div>
+                            <div class="col-sm-4"><label class="me-3 col-form-label">Miellat : </label></div>
+                            <div class="col-sm-4">
+                                <select class="form-select-sm" aria-label="Miellat" name="Miellat" id="Miellat">
+                                    <option selected>Sélèctionner</option>
+                                    <option value="Oui">Oui</option>
+                                    <option value="Non">Non</option>
+                                </select>
                             </div>
                             <div class="row  mb3 align-items-center">
-                                <div class="col-sm-4"><label class="me-3 col-form-label">Floraison : </label></div>
+                                <div class="col-sm-4"><label class="me-3 col-form-label">Floraison : </label>
+                                </div>
                                 <div class="col-sm-8"><input type="text" name="Floraison" id="Floraison"></div>
                             </div>
                             <div class="row  mb3 align-items-center">
-                                <div class="col-sm-4"><label class="me-3 col-form-label">Couleur : </label></div>
+                                <div class="col-sm-4"><label class="me-3 col-form-label">Couleur : </label>
+                                </div>
                                 <div class="col-sm-8"><input type="text" name="Couleur" id="Couleur"></div>
                             </div>
                             <div class="row  mb3 align-items-center">
-                                <div class="col-sm-4"><label class="me-3 col-form-label">Emplacement : </label></div>
+                                <div class="col-sm-4"><label class="me-3 col-form-label">Emplacement : </label>
+                                </div>
                                 <div class="col-sm-4">
-                                    <select class="form-select-sm" aria-label="Emplacement">
-                                    <option selected>Sélèctionner</option>
-                                    <option value="1">Les serres tropicales</option>
-                                    <option value="2">Le pinetum</option>
-                                    <option value="3">Le jardin au naturel</option>
-                                    <option value="4">Collection historique</option>
-                                    <option value="5">Les obtentions horticoles lorraines</option>
-                                  </select>
+                                    <select class="form-select-sm" aria-label="Emplacement" name="Emplacement"
+                                        id="Emplacement">
+                                        <option selected>Sélèctionner</option>
+                                        <option value="1">Les serres tropicales</option>
+                                        <option value="2">Le pinetum</option>
+                                        <option value="3">Le jardin au naturel</option>
+                                        <option value="4">Collection historique</option>
+                                        <option value="5">Les obtentions horticoles lorraines</option>
+                                    </select>
                                 </div>
                                 <!--TODO get list emplacements actualisé-->
                             </div>
@@ -115,10 +129,11 @@
 
                         </div>
 
-                    </div>
+                    </form>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Sauvegarder</button>
+                        <button type="button" class="btn btn-primary" id="addPlant"
+                            data-bs-dismiss="modal">Sauvegarder</button>
                     </div>
                 </div>
             </div>
@@ -183,14 +198,13 @@
                             <img class="me-2" src="../../../assets/icone/trash-solid-red.svg" height=20 width=20 />
                         </td>
                         <td>
-                            <button class="btn btn-sm btn-primary" onclick="save()">save</button>
+                            <button id="editBtn" class="btn btn-sm btn-primary" onclick="edit(this)">edit</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
             <button class="btn btn-lg bg-white disabled text-white"> a</button>
-            <button class="btn btn-primary float-end end" onclick="showQR('abc123')" data-bs-toggle="modal"
-                data-bs-target="#plantModal">Ajouter plante</button>
+            <button class="btn btn-primary float-end end" data-bs-toggle="modal" data-bs-target="#plantModal">Ajouter plante</button>
         </div>
     </section>
 
@@ -204,7 +218,7 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script type="text/javascript" src="../js/dashboard.js"></script>
+    <script type="module" src="../js/dashboard.js"></script>
     <script type="module" src="../js/scripts.js"></script>
 </body>
 
