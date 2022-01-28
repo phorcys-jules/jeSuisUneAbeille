@@ -20,6 +20,7 @@ router.post('/', (req, res) => {
     if ((result.length) && (bcrypt.compareSync(mdp, result[0].mdp)) && (mail == result[0].mail)) {
       res.status(200).sendFile(path.resolve(__dirname + "/../public/game.html"))
     } else {
+      console.log(result[0], mdp);
       res.send('Mauvais pseudo ou mot de passe')
     }
   })
