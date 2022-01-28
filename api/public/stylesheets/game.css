@@ -1,0 +1,145 @@
+
+#buttons{
+	display: grid;
+	grid-template-rows: 50% 50%;
+	row-gap: 50px;
+}
+
+#butiner{
+	color: white;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 10px 20px;
+	border: 5px solid black;
+	font-weight: bold;
+}
+
+.btn-validate{
+	background-color: #ffbe00cc;
+	padding: 10px 20px;
+	border: 5px solid black;
+	font-weight: bold;
+}
+
+.navbar-bottom{
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	column-gap: 10px;
+}
+
+.navbar-bottom a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navbar-bottom a:nth-of-type(1){
+	grid-column: 1/2;
+}
+
+.navbar-bottom a:nth-of-type(2){
+	grid-column: 2/3;
+}
+
+.navbar-bottom a:nth-of-type(3){
+	grid-column: 3/4;
+}
+
+@media screen and (min-width: 501px) {
+	#butiner{
+		font-size: 20px;
+	}
+
+	.btn{
+		font-size: 20px;
+	}
+
+	/*.navbar-bottom div:nth-of-type(1) h2{
+		font-size: 30px;
+	}
+
+	.navbar-bottom div:nth-of-type(2) h2{
+		font-size: 30px;
+	}*/
+
+	.content{
+		margin: 10% 30% 5% 30%;
+	}
+
+	/*
+	.navbar-bottom div:nth-of-type(2) img{
+		margin-top: 10px;
+		width: 80px;
+		height: fit-content;
+	}
+
+	.navbar-bottom div:nth-of-type(1) img{
+		margin-top: 10px;
+		width: 150px;
+		height: fit-content;
+	}
+
+	.navbar-bottom div:nth-of-type(1) h2{
+		margin: 30px -10px 30px 50px;
+		font-weight: bold;
+	}
+
+	.navbar-bottom div:nth-of-type(2) h2{
+		margin: 30px 20px;
+		font-weight: bold;
+	}
+
+	.navbar-bottom div:nth-of-type(2){
+		display: flex;
+		justify-content: right;
+		margin-right: 50px;
+	}*/
+
+
+	footer{
+		width: 97%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+
+	.content{
+		margin: 50% 20%;
+	}
+
+	#butiner{
+		font-size: 20px;
+	}
+
+	.btn-validate{
+		font-size: 20px;
+	}
+
+	/*.navbar-bottom div:nth-of-type(1) img{
+		width: 80%;
+		height: fit-content;
+		margin-top: 10px;
+	}
+	
+	.navbar-bottom div:nth-of-type(1) h2{
+		margin: 30px -20px 30px 20px;
+		font-weight: bold;
+		font-size: 35px;
+	}
+	
+	.navbar-bottom div:nth-of-type(2) img{
+		margin-top: 10px;
+		margin-right: 20px;
+		width: 40%;
+		height: fit-content;
+	}
+	
+	.navbar-bottom div:nth-of-type(2) h2{
+		margin: 30px 20px;
+		font-weight: bold;
+		font-size: 35px;
+	}
+
+	.navbar-bottom div:nth-of-type(2){
+		display: flex;
+		justify-content: right;
+	}*/
+}

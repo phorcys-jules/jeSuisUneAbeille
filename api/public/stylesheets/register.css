@@ -1,0 +1,33 @@
+#button a .btn-connexion{
+	background-color: #ffbe00cc;
+	padding: 5px 30px 0 30px;
+	border-radius: 10px;
+	border: 3px solid black;
+	margin-left: 30px;
+	width: 85%;
+}
+
+
+
+@media screen and (min-width: 501px) {
+	.card{
+		width: 50rem;
+		height: 30rem;
+		margin-bottom: 150px;
+	}
+
+	.container1{
+		margin-bottom: 100px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+
+	.card{
+		margin-bottom: 220px;
+	}
+
+	.card-body{
+		padding: 20px 20px;
+	}
+}

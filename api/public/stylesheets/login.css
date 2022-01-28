@@ -1,0 +1,115 @@
+
+.card-header{
+	color: white;
+	background-color: rgba(0, 0, 0, 0.8);
+	text-align: center;
+	padding: 20px 10px;
+}
+
+.card-body{
+	background-color: #ffbe00cc;
+}
+
+.btn{
+	color: white;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 10px 30px 5px 30px;
+}
+
+.btn-inscription{
+	background-color: #ffbe00cc;
+	padding: 5px 30px 0 30px;
+	border-radius: 10px;
+	border: 3px solid black;
+	margin-left: 30px;
+}
+
+.button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+footer{
+	position: fixed;
+	background-color: rgba(255, 190, 0, 0.4);
+	border: 3px solid black;
+	bottom: 0;
+	width: 100%;
+}
+
+@media screen and (min-width: 501px) {
+	.card{
+		width: 50rem;
+		height: 30rem;
+		margin-bottom: 30px;
+	}
+
+	.card-body{
+		padding: 40px 40px;
+	}
+
+	.container1{
+		display: grid;
+		grid-template-columns: 27% 15% 55%;
+		padding-bottom: 10%;
+	}
+
+	.container1 p{
+		grid-column: 2/3;
+		text-align: left;
+	}
+
+	.container1 #button{
+		grid-column: 3/4;
+		width: 110%;
+		display: flex;
+		justify-content: left;
+		margin-top: -5px;
+	}
+	
+}
+
+@media screen and (max-width: 500px) {
+	.container{
+		margin-left: 10px;
+		padding: 10% 0;
+	}
+
+	.card{
+		width: 100%;
+		height: 20rem;
+		margin-bottom: 70px;
+	}
+
+	.card-body{
+		padding: 20px 20px;
+	}
+
+	.container1{
+		display: grid;
+		grid-template-rows: 10% 30%;
+		padding-bottom: -10%;
+	}
+
+	.container1 p{
+		grid-row: 1/2;
+		text-align: center;
+	}
+
+	.container1 button{
+		grid-row: 2/3;
+		width: 80%;
+	}
+
+	#button a{
+		margin-left: -30px;
+	}
+
+	#button{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
