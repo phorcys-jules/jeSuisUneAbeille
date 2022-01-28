@@ -1,8 +1,8 @@
 let lat
 let lon
 
-function initialize(x, y) {
-    var map = L.map('map', { tap: false }).setView([48.660509, 6.155727], 15.5);
+function initialize(x,y) {
+    let map = L.map('map', { tap: false }).setView([48.660509, 6.155727], 15.5);
 
     var osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
@@ -18,13 +18,17 @@ function initialize(x, y) {
         iconSize: [24, 24],
     });
 
-    const me = L.icon({
-        iconUrl: '/images/marker.png',
-        iconSize: [24, 24],
+    const goldIcon = new L.Icon({
+        iconUrl: '../images/marker-icon-2x-gold.png',
+        shadowUrl: '../images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
     });
 
-    L.marker([x, y], { icon: me }).addTo(map).bindPopup(
-        'Vous êtes ici !'
+    L.marker([x, y], {icon:goldIcon}).addTo(map).bindPopup(
+        'You are here !'
     );
 
     L.marker([48.660676, 6.155261], { icon: ruche }).addTo(map).bindPopup(
@@ -56,22 +60,22 @@ function initialize(x, y) {
 
 function btnReload() {
     document.getElementById('btnReload').addEventListener('click', (evt) => {
-        evt.preventDefault()
-        window.location.reload()
-    })
+        evt.preventDefault();
+        window.location.reload();
+    });
 }
 
 window.onload = () => {
 
-    btnReload()
+    btnReload();
 
     fetch(`http://ip-api.com/json/?fields=61439`)
-        .then(response => response.json())
-        .then((results) => {
-            lat = results.lat
-            lon = results.lon
+    .then(response => response.json())
+    .then((results) => {
+        lat = results.lat
+        lon = results.lon
 
-            initialize(lat, lon)
-        })
-        .catch(err => console.log(err))
+        initialize(lat, lon)
+    })
+    .catch(err => console.log(err));
 }

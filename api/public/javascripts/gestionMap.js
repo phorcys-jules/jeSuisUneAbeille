@@ -1,6 +1,55 @@
-function initialize() {
-    var map = L.map('map', { tap: false }).setView([48.660509, 6.155727], 16);
+let map = L.map('map', { tap: false }).setView([48.660509, 6.155727], 16);
 
+let goldIcon = new L.Icon({
+    iconUrl: '../images/marker-icon-2x-gold.png',
+    shadowUrl: '../images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+});
+
+
+let geo = document.getElementById('geolocation');
+
+function allow(position)
+{
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    
+    console.log(lat + ", " + lon);
+    
+    L.marker([lat, lon],{icon:goldIcon}).bindPopup('<b> You are here! </b>').addTo(map);
+}
+
+function reject(error)
+{
+     let message = "";
+     switch(error.code)
+     {
+         case 1:
+            message = "Permission denied";
+            break;
+         case 2:
+             message = "Position not found";
+             break;
+         case 3:
+             message = "Timeout";
+             break;
+         case 4:
+             message = "Unknown error";
+             break;
+     }
+     console.log(message);
+}
+
+function geolocalisation(event)
+{
+    navigator.geolocation.getCurrentPosition(allow, reject);
+}
+
+
+function initialize() {
     map.dragging.disable();
     map.touchZoom.disable();
     map.doubleClickZoom.disable();
@@ -51,5 +100,8 @@ function initialize() {
 }
 
 document.body.onload = function () {
+    geo.addEventListener('click', function(){
+        geolocalisation();
+    });
     initialize()
 }
