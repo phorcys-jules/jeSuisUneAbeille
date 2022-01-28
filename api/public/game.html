@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JeSuisUneAbeille</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
-</head>
-
-<body>
-  <nav class="nav bg-light">
-    <h4 class="mt-1 ms-1">JeSuisUneAbeille</h4>
-    <a class="nav-link text-warning" href="/game">Game Page</a>
-    <a class="nav-link text-warning" href="/mapGame">Map</a>
-    <a class="nav-link text-warning" href="/infos">Infos</a>
-    <a class="nav-link text-warning" href="/plants">Plants</a>
-    <a class="nav-link text-red" href="/">Exit</a>
-  </nav>
-  <h1>Game Page</h1>
-  <div class="d-flex justify-content-center">
-    <button class="btn btn-success">SCAN QRCODE</button>
-  </div>
-  <div class="container bg-light rounded border justify-content-center mt-4 p-2">
-    <div class="d-flex justify-content-center">
-      <h4>Informations about the scan</h4>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game</title>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+        <link rel="stylesheet" href="stylesheets/map.css">
+        <link rel="stylesheet" href="stylesheets/game.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    </head>
+    <body>
+      <div class="navbar-top">
+        <a href="http://localhost:8080/"><img src="images/logo.png" alt="logo.png"></a>
+        <a class="nav-link" href="http://localhost:8080/leaderboard"><i class="fas fa-trophy fa-3x" style="color: gold"></i></a>
+        <a href="http://localhost:8080/mapGame"><img src="images/map.png" alt="map.png"></a>
+        <a href="http://localhost:8080/login"><img src="images/compte.jpeg" alt="compte.jpeg"></a>
     </div>
-    <div id="infosScan">
-
-    </div>
-    <div class="d-flex justify-content-center">
-      <button class="btn btn-primary" id="btnValidate">Validate</button>
-    </div>
-  </div>
-</body>
-
+    
+        <div class="content">
+            <div id="buttons">
+                <button id="butiner">Scan QR code</button>
+            </div>
+        </div>
+        <div class="container bg-light rounded border justify-content-center mt-4 p-2">
+          <div class="d-flex justify-content-center">
+            <h4>Informations about the scan</h4>
+          </div>
+          <div id="infosScan">
+      
+          </div>
+          <div class="d-flex justify-content-center">
+            <button class="btn btn-validate" id="btnValidate">Validate</button>
+          </div>
+        </div>
+        <footer>
+            <div class="navbar-bottom">
+                <a class="nav-link text-warning" href="/infos"><i class="fas fa-info fa-3x" style="color: dodgerblue"></i></a>
+                <a class="nav-link" href="/"><i class="fa fa-home fa-3x" style="color: brown"></i></a>
+                <a class="nav-link text-warning" href="/plants"><i class="fas fa-seedling fa-3x" style="color: green"></i></a>
+                <!--<div>
+                    <h2>0</h2><img src="images/nectar.png" alt="nectar.png">
+                </div>
+                <div>
+                    <h2>0</h2><img src="images/pollen.png" alt="pollen.png">
+                </div>-->
+            </div>
+        </footer>
+    </body>
 </html>

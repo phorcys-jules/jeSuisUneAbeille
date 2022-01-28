@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+        <link rel="stylesheet" href="stylesheets/map.css">
+        <link rel="stylesheet" href="stylesheets/game.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+              integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+              crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+              integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+              crossorigin=""></script>
+        <title>Map</title>
+    </head>
+    <body>
+        <div class="navbar-top">
+            <a href="http://localhost:8080/"><img src="images/logo.png" alt="logo.png"></a>
+            <a class="nav-link" href="http://localhost:8080/leaderboard"><i class="fas fa-trophy fa-3x" style="color: gold"></i></a>
+            <a href="http://localhost:8080/mapGame"><img src="images/map.png" alt="map.png"></a>
+            <a href="http://localhost:8080/login"><img src="images/compte.jpeg" alt="compte.jpeg"></a>
+        </div>
+        <div class="title">
+            <h2>MAP OF JARDIN BOTANIQUE</h2>
+        </div>
+        <div id="map" style="width: auto; height: 350px;"></div>
+        <div id="button">
+            <button id="btnReload">Reload map</button>
+        </div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JeSuisUneAbeille</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin="" />
-  <title>JeSuisUneAbeille</title>
-</head>
-
-<body>
-  <nav class="nav bg-light">
-    <h4 class="mt-1 ms-1">JeSuisUneAbeille</h4>
-    <a class="nav-link text-warning" href="/game">Game Page</a>
-    <a class="nav-link text-warning" href="/mapGame">Map</a>
-    <a class="nav-link text-warning" href="/infos">Infos</a>
-    <a class="nav-link text-warning" href="/plants">Plants</a>
-    <a class="nav-link text-red" href="/">Exit</a>
-  </nav>
-  <div id="map" class="container border rounded w-75 h-75 mt-4"></div>
-  <div class="d-flex justify-content-center mt-3">
-    <button class="btn btn-primary" id="btnReload">RELOADING MAP</button>
-  </div>
-
-  <script src="/javascripts/gestionMapGame.js"></script>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
-</body>
-</body>
-
+        <footer>
+            <div class="navbar-bottom">
+                <a class="nav-link" href="/"><i class="fa fa-home fa-3x" style="color: brown"></i></a>
+                <a class="nav-link" href="http://localhost:8080/game"><i class="fas fa-gamepad fa-3x" style="color: dodgerblue"></i></a>
+                <a class="nav-link" href="/plants"><i class="fas fa-seedling fa-3x" style="color: green"></i></a>
+            </div>
+        </footer>
+        
+        <script src="/javascripts/gestionMapGame.js"></script>
+    </body>
 </html>

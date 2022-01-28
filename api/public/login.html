@@ -2,43 +2,63 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JeSuisUneAbeille</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/map.css">
+    <link rel="stylesheet" href="stylesheets/login.css">
+    <link rel="stylesheet" href="stylesheets/game.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Sign in</title>
 </head>
 
 <body>
-  <nav class="nav bg-light">
-    <h4 class="mt-1 ms-1">JeSuisUneAbeille</h4>
-    <a class="nav-link text-warning" href="/">Main Page</a>
-    <a class="nav-link text-warning" href="/map">Map</a>
-    <a class="nav-link text-warning" href="/leaderboard">Leaderboard</a>
-    <a class="nav-link text-warning" href="/login">Login</a>
-    <a class="nav-link text-warning" href="/register">Register</a>
-  </nav>
-  <div class="container mt-4 p-4 d-flex justify-content-center">
-    <div class="card" style="width: 18rem;">
-      <div class="card-header">
-        Login
-      </div>
-      <div class="card-body">
-        <form action="/login" method="post">
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="mail" name="mail">
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="mdp" name="mdp">
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Submit</button>
-        </form>
-      </div>
+    <div class="navbar-top">
+        <a href="http://localhost:8080/"><img src="images/logo.png" alt="logo.png"></a>
+        <a class="nav-link" href="http://localhost:8080/leaderboard"><i class="fas fa-trophy fa-3x" style="color: gold"></i></a>
+        <a href="http://localhost:8080/map"><img src="images/map.png" alt="map.png"></a>
+        <a href="http://localhost:8080/login"><img src="images/compte.jpeg" alt="compte.jpeg"></a>
     </div>
-  </div>
+
+    <div class="container mt-4 d-flex justify-content-center">
+        <div class="card">
+            <div class="card-header">
+                <h1>SIGN IN</h1>
+            </div>
+            <div class="card-body">
+                <form action="/login" method="post">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"><h5>Login :</h5></label>
+                        <input type="email" class="form-control" id="nom" name="nom">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"><h5>Password :</h5></label>
+                        <input type="password" class="form-control" id="mdp" name="mdp">
+                    </div>
+                    <div class="button">
+                        <button type="submit" class="btn"><h5>Login</h5></button></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1">
+        <p>Vous n'avez pas de compte ?</p>    
+        <div id="button">                   
+            <a href="http://localhost:8080/register"><button type="submit" class="btn-inscription"><h6>S'inscrire</h6></button></a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="navbar-bottom">
+            <a class="nav-link" href="/"><i class="fa fa-home fa-3x" style="color: brown"></i></a>
+            <a class="nav-link" href="http://localhost:8080/game"><i class="fas fa-gamepad fa-3x" style="color: dodgerblue"></i></a>
+            <a class="nav-link" href="/plants"><i class="fas fa-seedling fa-3x" style="color: green"></i></a>
+        </div>
+    </footer>
 </body>
 
 </html>
