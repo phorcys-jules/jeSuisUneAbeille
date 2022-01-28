@@ -25,17 +25,20 @@ router.post('/', (req, res) => {
       else if (mdp !== mdpConf) {
           res.send('Mots de passe différents')
       }
+      else {
+        let hashMdp = await bcrypt.hash(mdp, 8)
+        console.log(hashMdp)
+  
+        sql.query('INSERT INTO utilisateur SET ?', { mail: mail, nom: nom, mdp: hashMdp }, (error, results) => {
+            if (error) {
+                throw error
+            } else {
+              res.status(200).sendFile(path.resolve(__dirname + "/../public/login.html"))
+            }
+        })
+      }
 
-      let hashMdp = await bcrypt.hash(mdp, 8)
-      console.log(hashMdp)
 
-      sql.query('INSERT INTO utilisateur SET ?', { mail: mail, nom: nom, mdp: hashMdp }, (error, results) => {
-          if (error) {
-              throw error
-          } else {
-            res.status(200).sendFile(path.resolve(__dirname + "/../public/login.html"))
-          }
-      })
 
   })
 })
