@@ -28,34 +28,35 @@ btnAddPlant.addEventListener("click", function(e){
 });
 
 
-//document.getElementById('editBtn').addEventListener("click", showQR());
-//todo
-function showQR(){
-    let codeNumber = 0;
+export function showQR(codeNumber){
     console.log(codeNumber);
 }
 
-function edit(btn) {
-    console.log('switch to edit mode',btn);
-    btn.innerHTML = 'save';
-    btn.id = 'save';
-    btn.onclick=null;
-    btn.removeEventListener("click", function(e) { e.preventDefault(); }, false);
-    btn.addEventListener("click", function(){
-        save(btn);
-    });
+export function edit(btn) {
+    btn.classList.toggle("btn-success");
+    if (btn.id =="editBtn") {
+        btn.innerHTML = 'save';
+        btn.id = 'save';
+    } else {
+        btn.innerHTML = 'edit';
+        btn.id = 'editBtn';
+    }
+    console.log('coucou');
+
 }
-function save(btn) {
+/*
+export function save(btn) {
     console.log('switch to save mode',btn);
     btn.innerHTML = 'edit';
     btn.id = 'edit';
+    btn.classList.toggle("btn-success");
     btn.onclick=null;
     btn.removeEventListener("click", function(e) { e.preventDefault(); }, false);
     btn.addEventListener("click", function(){
         edit(btn);
     });
     //e.onclick= edit(e);
-}
+}*/
 
 //une fois page chargé, ajouter less élèments 
 document.addEventListener("DOMContentLoaded", function(){

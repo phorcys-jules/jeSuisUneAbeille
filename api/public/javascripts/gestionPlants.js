@@ -3,11 +3,11 @@ function afficherListe(data) {
     for (let i = 0; i < data.length; i++) {
         document.getElementById('plantes').innerHTML += `
         <div>
-            <h1>${data[i].nom}</h1>
-            <p><strong>Description :</strong> ${data[i].description}</p>
+            <h1>${data[i].nom_fr}</h1>
+            <p><strong>Description :</strong> ${data[i].couleur}</p>
         <div>
         <div class="d-flex justify-content-center">
-            <img class="border rounded" src="${data[i].image}" alt="imgPlante" width="100" height="100">
+            <img class="border rounded" src="${data[i].photo}" alt="imgPlante" width="100" height="100">
         </div>
         <hr />
     `

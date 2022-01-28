@@ -1,3 +1,5 @@
+import { edit, showQR } from "../dashboard.js";
+
 export class Plantes {
     constructor(nomLatin, nomFrançais, hauteur, nectar, pollen, miellat, floraison, couleur, emplacementsJardin, qrCode, active, photos) {
 
@@ -46,9 +48,22 @@ export class Plantes {
         </td>
         <td class="text-center">
             <img class="me-2" src="../../../assets/icone/trash-solid-red.svg" height=20 width=20 />
-        </td>`
-        let bt = tr.getAttributeNode("qrButton");
-        //console.log("qr btn is :", bt);
+        </td>
+        <td>
+            <button id="editBtn" class="btn btn-sm btn-primary">edit</button>
+        </td>
+        `
+
+        let bt = tr.getElementsByClassName('btn');
+        //"qr btn is :", bt[0],  "edit btn is ", bt[1];
+        let qr = this.qrCode;
+        bt[0].addEventListener("click", function(){
+            showQR(qr);
+        });
+        bt[1].addEventListener("click", function(){
+            edit(this)
+
+        });
         return tr;
     }
 

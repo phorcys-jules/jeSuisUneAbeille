@@ -42,9 +42,9 @@ function initialize(x, y) {
             for (let i = 0; i < results.length; i++) {
                 L.marker([results[i].lat, results[i].lon], { icon: fleur }).addTo(map).bindPopup(
                     `
-                    <strong>${results[i].nom}</strong>
+                    <strong>${results[i].nom_fr}</strong>
                     <br/>
-                    <img src="${results[i].image}" alt="logo" width="50" height="50" class="border rounded">
+                    <img src="${results[i].photo}" alt="logo" width="50" height="50" class="border rounded">
                     `
                 );
             }
