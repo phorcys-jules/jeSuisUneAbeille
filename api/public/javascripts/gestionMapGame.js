@@ -10,12 +10,12 @@ function initialize(x,y) {
 
     const ruche = L.icon({
         iconUrl: '/images/ruche.png',
-        iconSize: [24, 24],
+        iconSize: [28, 28],
     });
 
     const fleur = L.icon({
         iconUrl: '/images/fleur.png',
-        iconSize: [24, 24],
+        iconSize: [26, 26],
     });
 
     const goldIcon = new L.Icon({
@@ -43,6 +43,7 @@ function initialize(x,y) {
     })
         .then(response => response.json())
         .then((results) => {
+            console.log(results[0]);
             for (let i = 0; i < results.length; i++) {
                 L.marker([results[i].lat, results[i].lon], { icon: fleur }).addTo(map).bindPopup(
                     `
@@ -69,9 +70,10 @@ window.onload = () => {
 
     btnReload();
 
-    fetch(`http://ip-api.com/json/?fields=61439`)
+    fetch(`http://ip-api.com/json`)
     .then(response => response.json())
     .then((results) => {
+     
         lat = results.lat
         lon = results.lon
 

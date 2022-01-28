@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/listPlants', (req, res, next) => {
-  sql.query('SELECT * FROM plantesTest', async (error, results) => {
+  sql.query('SELECT * FROM plantes', async (error, results) => {
         if (error) throw error
 
         res.json(results)
